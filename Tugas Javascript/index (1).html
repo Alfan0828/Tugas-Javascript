@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="daftar" onchange="tampil()">
+        <option value="">pilih hewan</option>
+        <option value="harimau">harimau</option>
+        <option value="panda">panda</option>
+    </select>
+        <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById("daftar")
+        let hasil = document.getElementById("hasil")
+
+        function tampil () {
+            switch (daftar.value) {
+                case "harimau":
+                    hasil.innerHTML = '<img src="harimau.jpg" alt="">'
+                    alert("ini adalah gambar harimau.jpg")
+                    break;
+                case "panda":
+                    hasil.innerHTML = '<img src="panda.jpg" alt="">'
+                    break;
+                    
+                default:
+                    hasil.innerHTML = "PILIH GAMBARNYA GAES"
+                    break;
+            } 
+        }
+    </script>
+</body>
+</html>
